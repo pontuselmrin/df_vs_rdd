@@ -44,12 +44,12 @@ try:
     spark_df = spark_ps_df.to_spark()
     spark_rdd = spark_df.rdd
 
-    # Calculate average exchange rate using DataFrames
+    # Calculate average cost of borrowing using DataFrames
     avg_df, time_df = calculate_average_dataframe(spark_df)
     print(f"Average cost of borrowing using DataFrames: {avg_df}")
     print(f"Time taken using DataFrames: {time_df} seconds")
 
-    # Calculate average exchange rate using RDDs
+    # Calculate average cost of borrowing using RDDs
     avg_rdd, time_rdd = calculate_average_rdd(spark_rdd)
     print(f"Average cost of borrowing using RDDs: {avg_rdd}")
     print(f"Time taken using RDDs: {time_rdd} seconds")
